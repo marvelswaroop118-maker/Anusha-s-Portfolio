@@ -1,0 +1,10 @@
+[00:00:00.847] Server  LOG     ✓ Ready in 620ms
+[00:00:02.473] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.741] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:02.741] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"2.0.1","sv":"0.1.3","ts":1779725426619} /_vercel/insights/view
+[00:00:05.692] Browser WARN    You are trying to animate backgroundColor from "#09090b" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable
+[00:00:16.675] Server  LOG     ✓ Compiled in 256ms
+[00:05:14.091] Server  ERROR   Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84164ea09a9sm11376068b3a.31 - gsmtp
+[00:05:18.240] Server  ERROR   Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2beb58b3bb6sm100915515ad.47 - gsmtp

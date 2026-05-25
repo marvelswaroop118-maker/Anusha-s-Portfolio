@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  
+  --animate-marquee-fast: marquee 20s linear infinite;
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee-slow: marquee 50s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #050B14;
+  color: #ffffff;
+
+  overscroll-behavior-y: none;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: rgba(197, 160, 89, 0.4);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: rgba(197, 160, 89, 0.4);
+  color: #ffffff;
+}
