@@ -63,7 +63,7 @@ export default function Education() {
       <div className="absolute bottom-0 left-0 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] bg-[#C5A059]/5 rounded-full blur-[100px] pointer-events-none z-0 translate-y-1/2 -translate-x-1/4 transform-gpu" />
 
       {/* ── MAIN LAYOUT WRAPPER ── */}
-      <div className="relative z-10 w-full max-w-[90rem] mx-auto px-5 md:px-12 flex flex-col h-full pt-20 lg:pt-24 pb-[4svh] lg:pb-[8svh] justify-between">
+      <div className="relative z-10 w-full max-w-[90rem] mx-auto px-5 md:px-12 flex flex-col h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-[4svh] lg:pb-[8svh] justify-between">
 
         {/* ── HEADER (Restored to force immediate animation) ── */}
         <motion.div

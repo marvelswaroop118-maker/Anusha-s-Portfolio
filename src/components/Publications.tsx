@@ -68,7 +68,7 @@ export default function Publications() {
       <div className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-white/80 rounded-full blur-[150px] pointer-events-none z-0 transform-gpu" />
 
       {/* ── MAIN CONTENT ── */}
-      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col h-full pt-20 md:pt-24 lg:pt-28 pb-6 lg:pb-10 px-6 md:px-12">
+      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-6 lg:pb-10 px-6 md:px-12">
 
         {/* HEADER: Fixed Animation Trigger */}
         <div className="mb-6 lg:mb-8 shrink-0">

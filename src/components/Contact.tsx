@@ -8,6 +8,7 @@ export default function Contact() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
 
 
@@ -21,13 +22,16 @@ export default function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),
       });
-      if (!res.ok) throw new Error("Failed to send");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to send");
 
       setIsSuccess(true);
+      setError(null);
       setFormState({ name: "", email: "", message: "" });
       setTimeout(() => setIsSuccess(false), 4000);
-    } catch {
-      // Failed state handling if needed
+    } catch (err: any) {
+      setError(err.message || "An error occurred");
+      setTimeout(() => setError(null), 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -54,7 +58,7 @@ export default function Contact() {
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-[#C5A059]/10 rounded-full blur-[100px] lg:blur-[120px] pointer-events-none z-0" />
 
       {/* ── MAIN LAYOUT (Safely pushed down with strict top padding to avoid wrapped navbars) ── */}
-      <div className="relative z-10 w-full max-w-[90rem] mx-auto px-4 md:px-12 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center gap-2 sm:gap-6 lg:gap-12 xl:gap-20 h-full pt-[100px] sm:pt-[120px] lg:pt-24 pb-4 lg:pb-[8svh]">
+      <div className="relative z-10 w-full max-w-[90rem] mx-auto px-4 md:px-12 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center gap-2 sm:gap-6 lg:gap-12 xl:gap-20 h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-4 lg:pb-[8svh]">
 
         {/* LEFT COLUMN: Typography & Husky */}
         <motion.div
@@ -140,11 +144,13 @@ export default function Contact() {
 
               <button
                 type="submit" disabled={isSubmitting || isSuccess}
-                className={`w-full py-2.5 sm:py-4 lg:py-4 mt-1 lg:mt-2 flex justify-center items-center gap-3 text-[#0F172A] text-[10px] sm:text-[11px] font-black uppercase tracking-[0.2em] rounded-xl transition-all duration-300 overflow-hidden relative group shrink-0 ${isSuccess ? "bg-green-600 text-white" : "bg-[#C5A059] hover:bg-white hover:text-[#09090b]"
+                className={`w-full py-2.5 sm:py-4 lg:py-4 mt-1 lg:mt-2 flex justify-center items-center gap-3 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.2em] rounded-xl transition-all duration-300 overflow-hidden relative group shrink-0 ${isSuccess ? "bg-green-600 text-white" : error ? "bg-red-500 text-white" : "bg-[#C5A059] text-[#0F172A] hover:bg-white hover:text-[#09090b]"
                   } disabled:opacity-70 disabled:cursor-not-allowed`}
               >
-                <span className="relative z-10">{isSubmitting ? "Sending..." : isSuccess ? "Message Sent ✓" : "Send Message"}</span>
-                {!isSubmitting && !isSuccess && (
+                <span className="relative z-10">
+                  {isSubmitting ? "Sending..." : isSuccess ? "Message Sent ✓" : error ? `Error: ${error}` : "Send Message"}
+                </span>
+                {!isSubmitting && !isSuccess && !error && (
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 )}
               </button>

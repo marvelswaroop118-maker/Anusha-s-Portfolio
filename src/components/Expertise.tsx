@@ -46,7 +46,7 @@ export default function Expertise() {
       <div className="absolute bottom-0 right-0 w-[500px] lg:w-[45vw] h-[500px] lg:h-[45vw] bg-white/80 rounded-full blur-[150px] pointer-events-none z-0 transform-gpu" />
 
       {/* ── MAIN LAYOUT WRAPPER ── */}
-      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col lg:flex-row h-full pt-24 lg:pt-32 pb-8 lg:pb-12 px-6 md:px-10 lg:px-12 gap-6 lg:gap-12 items-center">
+      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col lg:flex-row h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-8 lg:pb-12 px-6 md:px-10 lg:px-12 gap-6 lg:gap-12 items-center">
 
         {/* =========================================
             LEFT COLUMN: HEADER

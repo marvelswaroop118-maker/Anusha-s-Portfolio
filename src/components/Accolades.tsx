@@ -63,7 +63,7 @@ export default function Accolades() {
     return (
         <section
             id="accolades"
-            className="relative w-full h-[100svh] bg-[#f6f5f2] overflow-hidden flex flex-col font-sans pt-20 lg:pt-24 pb-6"
+            className="relative w-full h-[100svh] bg-[#f6f5f2] overflow-hidden flex flex-col font-sans pt-[110px] md:pt-[120px] lg:pt-[130px] pb-6"
         >
             {/* ── AMBIENT BACKGROUND ── */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" style={{ backgroundImage: `linear-gradient(rgba(15,23,42,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.1) 1px, transparent 1px)`, backgroundSize: "40px 40px" }} />

@@ -46,7 +46,7 @@ export default function Summary() {
       <div className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-white/80 rounded-full blur-[150px] pointer-events-none z-0 transform-gpu" />
 
       {/* ── MAIN LAYOUT WRAPPER ── */}
-      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col lg:flex-row h-full pt-28 lg:pt-32 pb-6 lg:pb-12 px-5 md:px-10 lg:px-12 gap-4 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col lg:flex-row h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-6 lg:pb-12 px-5 md:px-10 lg:px-12 gap-4 lg:gap-16 items-center">
 
         {/* =========================================
             LEFT/TOP: EXECUTIVE SUMMARY

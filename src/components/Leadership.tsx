@@ -162,7 +162,7 @@ export default function Leadership() {
             <div className="absolute bottom-[-20%] left-[-10%] w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-white/60 rounded-full blur-[120px] pointer-events-none z-0 transform-gpu" />
 
             {/* ── MAIN LAYOUT WRAPPER ── */}
-            <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col h-full pt-20 md:pt-24 lg:pt-24 pb-[2svh] lg:pb-[4svh]">
+            <div className="relative z-10 w-full max-w-[90rem] mx-auto flex flex-col h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-[2svh] lg:pb-[4svh]">
 
                 {/* ── HEADER AREA ── */}
                 <div className="px-5 md:px-12 shrink-0">

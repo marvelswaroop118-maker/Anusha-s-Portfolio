@@ -71,7 +71,7 @@ export default function Advocacy() {
     <section
       id="advocacy"
       // Strictly locked to 100svh
-      className="relative w-full h-[100svh] bg-[#f6f5f2] flex flex-col font-sans select-none overflow-hidden pt-20 md:pt-24 lg:pt-28 pb-6 lg:pb-8"
+      className="relative w-full h-[100svh] bg-[#f6f5f2] flex flex-col font-sans select-none overflow-hidden pt-[110px] md:pt-[120px] lg:pt-[130px] pb-6 lg:pb-8"
     >
       {/* ── AMBIENT BACKGROUND LIGHTING ── */}
       <div className="absolute inset-0 opacity-[0.25] pointer-events-none z-0" style={{ backgroundImage: `linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px)`, backgroundSize: "40px 40px" }} />

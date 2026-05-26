@@ -213,7 +213,7 @@ export default function Experience() {
       <div className="absolute top-[-5%] right-[-15%] w-[500px] lg:w-[900px] h-[500px] lg:h-[900px] bg-[#C5A059]/8 rounded-full blur-[140px] pointer-events-none z-0 transform-gpu" />
       
       {/* ── MAIN LAYOUT ── */}
-      <div className="relative z-10 w-full max-w-[96rem] mx-auto flex flex-col h-full pt-20 lg:pt-24 pb-[2svh] lg:pb-[5svh] px-5 md:px-10 lg:px-14">
+      <div className="relative z-10 w-full max-w-[96rem] mx-auto flex flex-col h-full pt-[110px] md:pt-[120px] lg:pt-[130px] pb-[2svh] lg:pb-[5svh] px-5 md:px-10 lg:px-14">
         
         {/* ── HEADER ── */}
         <motion.div variants={staggerContainer} initial="hidden" animate="show" className="w-full mb-4 lg:mb-8 shrink-0">
